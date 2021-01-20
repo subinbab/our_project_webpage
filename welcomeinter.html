@@ -1,0 +1,208 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+  <div class="container-fluid"> 
+    <a class="navbar-brand" href="userregistration.php">HOME</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       <li class="nav-item">
+          <a class="nav-link" href="discharge.php?regnumber=<?php echo $regnumber;?>"  name="regnumber" >DISCHARGED</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="priscriptionview.php?regnumber=<?php echo $regnumber; ?>">PRISCRIPTION</a>
+        </li>
+       
+        
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+
+
+<link rel="stylesheet" href="styles.css">
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <style>
+    body {
+      min-width: 310px;
+        max-width: 1380px;
+        height: 500px;
+      margin: 0 auto;
+    }
+    h2 {
+      font-family: Arial;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  </style>
+
+
+
+
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="examplestyle.css">
+</head>
+<body> 
+    <div class="container">
+        
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="myLeftCtn"> 
+                        
+                            <header></header>
+                            <div class="form-group">
+                                
+                                 <h5>NAME :akhil</h5>
+                                 
+                            </div>
+
+                            <div class="form-group">
+                                <h5>AGE : 28</h5>
+                            </div>
+
+                            <div class="form-group">
+                                 <h5>DISEASE : accident</h5>
+                            </div>
+
+                            <div class="form-group">
+                                <h5>STATUS : stay</h5>
+                            </div>
+
+                            
+
+
+                            
+                        
+                    </div>
+                    <div class="col-md-6">
+                         <div class="box">
+                        
+                           <form action="priscription.php" method="post">
+        
+        <div>
+             <input type="hidden" name="regnumber" value="8965">
+        </div>
+        <div class="tablet">
+            <p>Enter tablet name</p>
+          <input type="text" name="name" >
+        </div>
+        <div>
+          <p>Enter time </p>
+          <input type="text" name="time" placeholder ="morning or after noon or night">
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-success">submit</button>
+        <br>
+        <br>
+        <br>
+       </form>    
+                        </div>
+                    
+                  </div>
+
+
+    
+                </div> 
+                <div class="col-md-6">
+                    <div class="myRightCtn">
+                             <body>
+                                  <h2>History</h2>
+                                  <div id="chart-temperature" class="container" data-highcharts-chart="0" style="overflow: hidden;"><div id="highcharts-3p1onyw-0" dir="ltr" class="highcharts-container " style="position: relative; overflow: hidden; width: 340px; height: 500px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;"><svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="340" height="500" viewBox="0 0 340 500"><desc>Created with Highcharts 8.2.2</desc><defs><clippath id="highcharts-3p1onyw-1-"><rect x="0" y="0" width="239" height="329" fill="none"></rect></clippath></defs><rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="340" height="500" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="91" y="53" width="239" height="329"></rect><g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1"><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 96.5 53 L 96.5 382" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 121.5 53 L 121.5 382" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 147.5 53 L 147.5 382" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 172.5 53 L 172.5 382" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 197.5 53 L 197.5 382" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 222.5 53 L 222.5 382" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 247.5 53 L 247.5 382" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 272.5 53 L 272.5 382" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 298.5 53 L 298.5 382" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 323.5 53 L 323.5 382" opacity="1"></path></g><g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1"><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 91 382.5 L 330 382.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 91 327.5 L 330 327.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 91 272.5 L 330 272.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 91 218.5 L 330 218.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 91 163.5 L 330 163.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 91 108.5 L 330 108.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 91 52.5 L 330 52.5" opacity="1"></path></g><rect fill="none" class="highcharts-plot-border" data-z-index="1" x="91" y="53" width="239" height="329"></rect><g class="highcharts-axis highcharts-xaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 91 382.5 L 330 382.5"></path></g><g class="highcharts-axis highcharts-yaxis" data-z-index="2"><text x="25.734375" data-z-index="7" text-anchor="middle" transform="translate(0,0) rotate(270 25.734375 217.5)" class="highcharts-axis-title" style="color:#666666;fill:#666666;" y="217.5"><tspan>Temperature (Celsius)</tspan></text><path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 91 53 L 91 382"></path></g><g class="highcharts-series-group" data-z-index="3"><g class="highcharts-series highcharts-series-0 highcharts-line-series" data-z-index="0.1" opacity="1" transform="translate(91,53) scale(1 1)" clip-path="url(#highcharts-3p1onyw-1-)"><path fill="none" d="M 6.2894736842105 54.833333333330756 L 18.868421052632 54.833333333330756 L 31.447368421053 54.833333333330756 L 44.026315789474 54.833333333330756 L 56.605263157895 54.833333333330756 L 69.184210526316 54.833333333330756 L 81.763157894737 54.833333333330756 L 94.342105263158 54.833333333330756 L 106.92105263158 54.833333333330756 L 119.5 54.833333333330756 L 132.07894736842 274.16666666666924 L 144.65789473684 274.16666666666924 L 157.23684210526 274.16666666666924 L 169.81578947368 274.16666666666924 L 182.39473684211 274.16666666666924 L 194.97368421053 274.16666666666924 L 207.55263157895 274.16666666666924 L 220.13157894737 274.16666666666924 L 232.71052631579 274.16666666666924" class="highcharts-graph" data-z-index="1" stroke="#059e8a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M 6.2894736842105 54.833333333330756 L 18.868421052632 54.833333333330756 L 31.447368421053 54.833333333330756 L 44.026315789474 54.833333333330756 L 56.605263157895 54.833333333330756 L 69.184210526316 54.833333333330756 L 81.763157894737 54.833333333330756 L 94.342105263158 54.833333333330756 L 106.92105263158 54.833333333330756 L 119.5 54.833333333330756 L 132.07894736842 274.16666666666924 L 144.65789473684 274.16666666666924 L 157.23684210526 274.16666666666924 L 169.81578947368 274.16666666666924 L 182.39473684211 274.16666666666924 L 194.97368421053 274.16666666666924 L 207.55263157895 274.16666666666924 L 220.13157894737 274.16666666666924 L 232.71052631579 274.16666666666924" visibility="visible" data-z-index="2" class="highcharts-tracker-line" stroke-linecap="round" stroke-linejoin="round" stroke="rgba(192,192,192,0.0001)" stroke-width="22"></path></g><g class="highcharts-markers highcharts-series-0 highcharts-line-series highcharts-tracker" data-z-index="0.1" opacity="1" transform="translate(91,53) scale(1 1)" clip-path="none"><path fill="#059e8a" d="M 6 59 A 4 4 0 1 1 6.0039999993333355 58.99999800000017 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 18 59 A 4 4 0 1 1 18.003999999333335 58.99999800000017 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 31 59 A 4 4 0 1 1 31.003999999333335 58.99999800000017 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 44 59 A 4 4 0 1 1 44.00399999933334 58.99999800000017 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 56 59 A 4 4 0 1 1 56.00399999933334 58.99999800000017 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 69 59 A 4 4 0 1 1 69.00399999933333 58.99999800000017 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 81 59 A 4 4 0 1 1 81.00399999933333 58.99999800000017 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 94 59 A 4 4 0 1 1 94.00399999933333 58.99999800000017 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 106 59 A 4 4 0 1 1 106.00399999933333 58.99999800000017 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 119 59 A 4 4 0 1 1 119.00399999933333 58.99999800000017 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 132 278 A 4 4 0 1 1 132.00399999933333 277.9999980000002 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 144 278 A 4 4 0 1 1 144.00399999933333 277.9999980000002 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 157 278 A 4 4 0 1 1 157.00399999933333 277.9999980000002 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 169 278 A 4 4 0 1 1 169.00399999933333 277.9999980000002 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 182 278 A 4 4 0 1 1 182.00399999933333 277.9999980000002 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 194 278 A 4 4 0 1 1 194.00399999933333 277.9999980000002 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 207 278 A 4 4 0 1 1 207.00399999933333 277.9999980000002 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 220 278 A 4 4 0 1 1 220.00399999933333 277.9999980000002 Z" opacity="1" class="highcharts-point"></path><path fill="#059e8a" d="M 232 278 A 4 4 0 1 1 232.00399999933333 277.9999980000002 Z" opacity="1" class="highcharts-point"></path></g></g><text x="170" text-anchor="middle" class="highcharts-title" data-z-index="4" style="color:#333333;font-size:18px;fill:#333333;" y="24"><tspan>Temperature</tspan></text><text x="170" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color:#666666;fill:#666666;" y="52"></text><text x="10" text-anchor="start" class="highcharts-caption" data-z-index="4" style="color:#666666;fill:#666666;" y="497"></text><g class="highcharts-data-labels highcharts-series-0 highcharts-line-series" data-z-index="6" opacity="1" transform="translate(91,53) scale(1 1)"><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(-5,31)"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round" style="">28.3</tspan><tspan x="5" y="16">28.3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(1,31)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.3</tspan><tspan x="5" y="16">28.3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(13,31)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.3</tspan><tspan x="5" y="16">28.3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(26,31)"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.3</tspan><tspan x="5" y="16">28.3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(39,31)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.3</tspan><tspan x="5" y="16">28.3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(51,31)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.3</tspan><tspan x="5" y="16">28.3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(64,31)"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.3</tspan><tspan x="5" y="16">28.3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(76,31)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.3</tspan><tspan x="5" y="16">28.3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(89,31)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.3</tspan><tspan x="5" y="16">28.3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(101,31)"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.3</tspan><tspan x="5" y="16">28.3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(114,250)"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.2</tspan><tspan x="5" y="16">28.2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(127,250)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.2</tspan><tspan x="5" y="16">28.2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(139,250)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.2</tspan><tspan x="5" y="16">28.2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(152,250)"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.2</tspan><tspan x="5" y="16">28.2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(164,250)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.2</tspan><tspan x="5" y="16">28.2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(177,250)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.2</tspan><tspan x="5" y="16">28.2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined" data-z-index="1" transform="translate(190,250)"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.2</tspan><tspan x="5" y="16">28.2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(202,250)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.2</tspan><tspan x="5" y="16">28.2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined highcharts-data-label-hidden" data-z-index="1" transform="translate(208,250)" opacity="0" style="pointer-events:none;"><text x="5" data-z-index="1" y="16" style="color:#000000;font-size:11px;font-weight:bold;fill:#000000;"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">28.2</tspan><tspan x="5" y="16">28.2</tspan></text></g></g><g class="highcharts-legend" data-z-index="7"><rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="8" height="8" visibility="hidden"></rect><g data-z-index="1"><g></g></g></g><g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7"><text x="99.88219854856168" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 99.88219854856168 398)" y="398" opacity="1"><tspan>2020-12-08 12:56:45</tspan><title>2020-12-08 12:56:45</title></text><text x="125.04009328540067" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 125.04009328540067 398)" y="398" opacity="1"><tspan>2020-12-08 12:56:35</tspan></text><text x="150.19798802224068" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 150.19798802224068 398)" y="398" opacity="1"><tspan>2020-12-08 12:56:24</tspan></text><text x="175.3558827590907" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 175.3558827590907 398)" y="398" opacity="1"><tspan>2020-12-08 12:56:14</tspan></text><text x="200.5137774959307" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 200.5137774959307 398)" y="398" opacity="1"><tspan>2020-12-08 12:56:04</tspan></text><text x="225.67167223277067" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 225.67167223277067 398)" y="398" opacity="1"><tspan>2020-12-08 12:55:53</tspan></text><text x="250.82956696961068" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 250.82956696961068 398)" y="398" opacity="1"><tspan>2020-12-08 12:55:43</tspan></text><text x="275.98746170646064" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 275.98746170646064 398)" y="398" opacity="1"><tspan>2020-12-08 12:55:32</tspan></text><text x="301.14535644330067" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 301.14535644330067 398)" y="398" opacity="1"><tspan>2020-12-08 12:55:22</tspan></text><text x="326.30325118014065" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0) rotate(-45 326.30325118014065 398)" y="398" opacity="1"><tspan>2020-12-08 12:55:12</tspan></text></g><g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7"><text x="76" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="331" opacity="1">28.2</text><text x="76" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="112" opacity="1">28.3</text><text x="76" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="386" opacity="1">28.175</text><text x="76" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="276" opacity="1">28.225</text><text x="76" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="222" opacity="1">28.25</text><text x="76" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="167" opacity="1">28.275</text><text x="76" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="57" opacity="1">28.325</text></g></svg></div></div>
+                                  
+                                <div id="chart-temperature" class="container"></div>
+                                <div id="chart-humidity" class="container"></div>
+   
+                                <script>
+
+                               var value1 = <?php echo $value1; ?>;
+                                  var value2 = <?php echo $value2; ?>;
+                                 //var value3 = <?php  $value3; ?>;
+                                 var reading_time = <?php echo $reading_time; ?>;
+
+                                 var chartT = new Highcharts.Chart({
+                                   chart:{ renderTo : 'chart-temperature' },
+                                      title: { text: ' Temperature' },
+                                  series: [{
+                                showInLegend: false,
+                               data: value1
+                               }],
+                                plotOptions: {
+                                line: { animation: false,
+                                dataLabels: { enabled: true }
+                               },
+                             series: { color: '#059e8a' }
+                                  },
+                               xAxis: { 
+                               type: 'datetime',
+                                categories: reading_time
+                                   },
+                                  yAxis: {
+                                 title: { text: 'Temperature (Celsius)' }
+                               //title: { text: 'Temperature (Fahrenheit)' }
+                                  },
+                              credits: { enabled: false }
+                               });
+                              </script>
+                                
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+       
+  
+</div>
+      
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
