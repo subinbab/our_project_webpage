@@ -12,7 +12,7 @@
 		<input type="text" name="reg number " autocomplete="off" class="form-control" >
 	</div>
 </form>
-<a href="viewtemp.php" class="btn btn-success" > click to enter </a>
+<a href="welcomeinter.html" class="btn btn-success" > click to enter </a>
 
 </body>
 </html>
